@@ -55,7 +55,7 @@ export default Header;
 export const MobileHeader = () => {
   const [isOpen, toggleMenu] = useState(false);
   return (
-    <div className="flex flex-1 justify-center m-5 cursor-pointer ">
+    <div className="flex flex-1 justify-center m-5  ">
       <MenuList isOpen={isOpen} toggleMenu={toggleMenu} />
       <label className=" font-extrabold text-white flex flex-1 justify-center text-xl ml-2 ">
         Crypto punks
