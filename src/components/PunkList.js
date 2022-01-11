@@ -10,7 +10,7 @@ const PunkList = ({ punkList, onSelect }) => {
   return (
     <div
       className={
-        width < 764
+        width <= 764
           ? "flex flex-1 flex-wrap"
           : "grid grid-flow-row grid-cols-1 lg:grid-cols-3 xl:grid-cols-5 md:grid-cols-3 sm:grid-cols-1 auto-rows-max  gap-2  "
       }

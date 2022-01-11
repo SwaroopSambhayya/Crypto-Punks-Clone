@@ -15,7 +15,7 @@ function App() {
   }, []);
   console.log(punkList);
   return (
-    <div className=" bg-black  ">
+    <div className=" bg-black scroll-smooth  ">
       <Header />
       <MainCard selectedPunk={selectedPunk} />
       <PunkList punkList={punkList} onSelect={setSelectedPunk} />
