@@ -1,6 +1,8 @@
-# Getting Started with Create React App
+# Crypto Punks Clone 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Built with React JS, Tailwind CSS and Web 3.0 Technologies ( MetaMask and ThirdWeb)
+
+![Crypto Punks](https://github.com/SwaroopSambhayya/Crypto-Punks-Clone/blob/master/src/Screenshot%202022-01-11%20at%201.14.25%20PM.png)
 
 ## Available Scripts
 
