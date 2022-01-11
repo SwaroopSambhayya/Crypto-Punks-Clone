@@ -5,6 +5,16 @@ const MainCard = ({ selectedPunk }) => {
   const { width, height } = useWindowDimensions();
   console.log(width);
   return Object.keys(selectedPunk).length !== 0 && width >= 768 ? (
+    <DesktopCard selectedPunk={selectedPunk} />
+  ) : (
+    <div></div>
+  );
+};
+
+export default MainCard;
+
+const DesktopCard = ({ selectedPunk }) => {
+  return (
     <div className="flex flex-col">
       <div className="flex flex-1  h-96 ">
         <img
@@ -41,9 +51,5 @@ const MainCard = ({ selectedPunk }) => {
       </div>
       <div className=" bg-gray-700 mx-4 my-6 h-1 rounded flex flex-1" />
     </div>
-  ) : (
-    <div></div>
   );
 };
-
-export default MainCard;
