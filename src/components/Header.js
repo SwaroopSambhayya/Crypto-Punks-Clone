@@ -3,6 +3,7 @@ import punkLogo from "../assets/cryptopunk-logo.png";
 import searchIcon from "../assets/search.png";
 import "../components/header.css";
 import themeIcon from "../assets/theme-switch.png";
+
 const Header = () => {
   return (
     <div className="h-28 flex items-center flex-1  justify-between  m-3 px-4 ">

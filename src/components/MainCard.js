@@ -1,7 +1,10 @@
 import React from "react";
+import useWindowDimensions from "../customHooks/getWindowDimesions";
 import SocialIcon from "./SocialIcon";
 const MainCard = ({ selectedPunk }) => {
-  return Object.keys(selectedPunk).length !== 0 ? (
+  const { width, height } = useWindowDimensions();
+  console.log(width);
+  return Object.keys(selectedPunk).length !== 0 && width >= 768 ? (
     <div className="flex flex-col">
       <div className="flex flex-1  h-96 ">
         <img
