@@ -13,7 +13,7 @@ function App() {
   useEffect(() => {
     getPunkList(setPunklList);
   }, []);
-
+  console.log(punkList);
   return (
     <div className=" bg-black  ">
       <Header />
