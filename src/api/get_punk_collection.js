@@ -9,5 +9,6 @@ export const getPunkList = async (setPunkList) => {
   setPunkList(
     response?.data?.assets !== undefined ? response.data.assets : dummyList
   );
+  console.log("Cool", response.data.assets);
   return response.data.assets;
 };
