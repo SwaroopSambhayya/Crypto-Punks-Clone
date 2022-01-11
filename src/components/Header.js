@@ -75,7 +75,7 @@ export const MobileHeader = () => {
 export const MenuList = ({ isOpen, toggleMenu }) => {
   return (
     <div
-      className={` ease-in-out  duration-300 w-3/4   h-full absolute right-0 bottom-0 top-0 ${
+      className={` ease-in-out  duration-300 w-3/4   h-full fixed z-40 right-0 bottom-0 top-0 ${
         isOpen ? "translate-x-0 " : "translate-x-full"
       } `}
       style={{ backgroundColor: "#1e1e1c" }}
