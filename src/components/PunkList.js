@@ -1,7 +1,10 @@
-import React from "react";
+import React, { useEffect } from "react";
 import CollectionCard from "./CollectionCard";
 
 const PunkList = ({ punkList, onSelect }) => {
+  useEffect(() => {
+    if (punkList[0]) onSelect(punkList[0]);
+  }, [punkList, onSelect]);
   return (
     <div className="   grid grid-flow-row grid-cols-1 lg:grid-cols-3 xl:grid-cols-5 md:grid-cols-3 sm:grid-cols-1 auto-rows-max  gap-2  ">
       {punkList.map((punkData) => (
