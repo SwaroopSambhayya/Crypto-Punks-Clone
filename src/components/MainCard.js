@@ -7,7 +7,7 @@ const MainCard = ({ selectedPunk }) => {
         <img
           src={selectedPunk?.image_original_url}
           alt=""
-          className="  sm:rounded-lg  md:rounded-2xl flex m-4 h-96"
+          className="  rounded sm:rounded-lg  md:rounded-2xl flex m-4 h-96"
         />
         <div className="flex flex-col justify-between ">
           <label className="font-bold  m-4 text-white text-3xl sm:text-9xl  ">
