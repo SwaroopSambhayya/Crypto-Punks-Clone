@@ -1,23 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+import "./App.css";
+import Header from "./components/Header";
+import CollectionCard from "./components/CollectionCard";
+import { useEffect, useState } from "react";
+import { getPunkList } from "./api/get_punk_collection";
+import PunkList from "./components/PunkList";
+import MainCard from "./components/MainCard";
 
 function App() {
+  const [punkList, setPunklList] = useState([]);
+  const [selectedPunk, setSelectedPunk] = useState({});
+  useEffect(() => {
+    getPunkList(setPunklList);
+  }, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className=" bg-black  ">
+      <Header />
+      <MainCard selectedPunk={selectedPunk} />
+      <PunkList punkList={punkList} onSelect={setSelectedPunk} />
     </div>
   );
 }
