@@ -18,10 +18,13 @@ const PunkList = ({ punkList, onSelect }) => {
       {punkList.map((punkData) => (
         <div onClick={() => onSelect(punkData)}>
           <CollectionCard
+            key={punkData.id}
             id={punkData.id}
             name={punkData.name}
             properties={punkData.traits}
             img={punkData.image_url}
+            profile_img={punkData?.owner?.profile_img_url}
+            asset_contract={punkData?.asset_contract?.address}
           />
         </div>
       ))}

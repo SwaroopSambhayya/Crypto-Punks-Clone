@@ -4,12 +4,13 @@ import searchIcon from "../assets/search.png";
 import "../components/header.css";
 import themeIcon from "../assets/theme-switch.png";
 import useWindowDimensions from "../customHooks/getWindowDimesions";
-import { CgMenuMotion } from "react-icons/cg";
+import { CgArrowLeft, CgMenuMotion } from "react-icons/cg";
 import { IoMdClose } from "react-icons/io";
 import { BsShop } from "react-icons/bs";
 import { HiOutlineLocationMarker } from "react-icons/hi";
 import { FaDrawPolygon } from "react-icons/fa";
-const Header = () => {
+import { useNavigate } from "react-router-dom";
+const Header = ({ showBack }) => {
   const { width } = useWindowDimensions();
   return width > 1000 ? (
     <div className="h-28 flex items-center flex-1  justify-between  m-3 px-4 ">
@@ -46,17 +47,25 @@ const Header = () => {
       </div>
     </div>
   ) : (
-    <MobileHeader />
+    <MobileHeader showBack={showBack} />
   );
 };
 
 export default Header;
 
-export const MobileHeader = () => {
+export const MobileHeader = ({ showBack }) => {
   const [isOpen, toggleMenu] = useState(false);
+  const navigate = useNavigate();
+
   return (
     <div className="flex flex-1 justify-center m-5  ">
       <MenuList isOpen={isOpen} toggleMenu={toggleMenu} />
+
+      {showBack && (
+        <div className="self-start">
+          <CgArrowLeft size={28} color="white" onClick={() => navigate("/")} />
+        </div>
+      )}
       <label className=" font-extrabold text-white flex flex-1 justify-center text-xl ml-2 ">
         Crypto punks
       </label>

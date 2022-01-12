@@ -1,10 +1,34 @@
 import React from "react";
 import eth from "../assets/weth.png";
-const CollectionCard = ({ id, name, img, properties }) => {
+import useWindowDimensions from "../customHooks/getWindowDimesions";
+import { useNavigate } from "react-router-dom";
+
+const CollectionCard = ({
+  id,
+  name,
+  img,
+  properties,
+  profile_img,
+  asset_contract,
+}) => {
+  const { width } = useWindowDimensions();
+  const navigate = useNavigate();
+  const routeChange = () => {
+    navigate("details", {
+      state: {
+        id: id,
+        name: name,
+        img: img,
+        properties: properties,
+        profile_img,
+        asset_contract,
+      },
+    });
+  };
   return (
     <div
       className="  m-5 pb-0.5 cursor-pointer rounded-lg text-white"
-      onClick={() => console.log(name)}
+      onClick={() => (width <= 764 ? routeChange() : console.log(name))}
       style={{ backgroundColor: "#1c1c1e" }}
     >
       <img src={img} alt="Punk" className="w-full rounded-t-xl" />
