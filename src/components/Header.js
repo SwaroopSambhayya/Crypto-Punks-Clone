@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import punkLogo from "../assets/cryptopunk-logo.png";
+import punkLogo from "../assets/cryptopunk-logo.jpg";
 import searchIcon from "../assets/search.png";
 import "../components/header.css";
 import themeIcon from "../assets/theme-switch.png";
