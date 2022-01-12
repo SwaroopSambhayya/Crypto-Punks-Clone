@@ -10,9 +10,13 @@ const PunkDetails = () => {
   const { id, name, img, properties, asset_contract, profile_img } =
     location.state;
   return (
-    <div className="flex flex-col flex-1 bg-black">
+    <div className="flex flex-col flex-1 h-max ">
       <Header showBack />
-      <div className="   pb-0.5  text-white" onClick={() => console.log(name)}>
+      <div
+        className="  h-full mx-2 rounded-lg  pb-0.5   text-white"
+        onClick={() => console.log(name)}
+        style={{ backgroundColor: "#1c1c1e" }}
+      >
         <OwnerInfo asset_contract={asset_contract} profile_img={profile_img} />
         <img src={img} alt="Punk" className="w-full " />
         <div className="mx-3 my-4 ">

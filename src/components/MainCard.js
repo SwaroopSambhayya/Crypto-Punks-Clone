@@ -49,7 +49,7 @@ const DesktopCard = ({ selectedPunk }) => {
 
 export const OwnerInfo = ({ profile_img, asset_contract }) => {
   return (
-    <section className="flex   items-center mx-2 my-4 ">
+    <section className="flex   items-center mr-10 ml-2 my-4 ">
       <img src={profile_img} alt="" className="  h-16 rounded-full    " />
       <div className="flex flex-col truncate   ">
         <div className="flex items-center ">
